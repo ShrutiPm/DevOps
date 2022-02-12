@@ -5,12 +5,6 @@ pipeline {
           steps {
                   sh 'python --version'
                  }
-       stage ('check linux') {
-           steps {
-                docker images 
-          }
         }         
       }
-   }
-
 }
