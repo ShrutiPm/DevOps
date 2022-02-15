@@ -6,9 +6,10 @@ pipeline {
           steps {
                   //sh 'python --version'
                   //sh 'sleep 60'
-             echo ${JOB_NAME}
-             echo ${BUILD_NUMBER}
-             echo ${BUILD_URL}
+             echo "$env.JOB_NAME"
+             echo "$BUILD_NUMBER"
+             echo "$BUILD_URL"
+             echo "$PATH"
                  }
         }         
       }
