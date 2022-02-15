@@ -4,6 +4,7 @@ pipeline {
         stage ('pull image' ) {
           steps {
                   sh 'python --version'
+                  sh 'sleep 60'
                  }
         }         
       }
