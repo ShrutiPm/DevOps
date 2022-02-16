@@ -1,9 +1,9 @@
 pipeline {
    agent { docker {image 'python:latest' } }
    stages {
-     stage {
-        steps ("Build Starts") {
-
+     stage ("Build Image") {
+        steps {
+               echo "$BUILD_NUMBER"
                 }
        }
 }
