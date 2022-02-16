@@ -1,11 +1,11 @@
 pipeline {
    //agent { docker {image 'python:latest' } }
    agent any
-   environment {
+   //environment {
       //dockerhome = tool 'MyDocker'
-      mavenhome = tool 'MyMaven'
-      PATH = "$mavenhome/bin:$PATH"
-                          }
+      //mavenhome = tool 'MyMaven'
+      //PATH = "$mavenhome/bin:$PATH"
+     //                     }
    stages {
      stage ("Build Image") {
         steps {
