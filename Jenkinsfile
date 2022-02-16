@@ -3,7 +3,8 @@ pipeline {
    stages {
      stage ("Build Image") {
         steps {
-               echo "$BUILD_NUMBER"
+               //echo "$BUILD_NUMBER"
+               sh 'python --version'
                 }
        }
 }
