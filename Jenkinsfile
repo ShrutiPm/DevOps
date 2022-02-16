@@ -1,11 +1,15 @@
 pipeline {
-   agent { docker {image 'python:latest' } }
+   //agent { docker {image 'python:latest' } }
+   agent any
    stages {
      stage ("Build Image") {
         steps {
                //echo "$BUILD_NUMBER"
-               sh 'python --version'
+               //sh 'python --version'
+                 echo "$BUILD_NUMBER"
+                 echo "$PATH"
                 }
        }
 }
+   
 }
