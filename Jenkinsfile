@@ -4,6 +4,7 @@ pipeline {
    environment {
       dockerhome = tool 'MyDocker'
       mavenhome = tool 'MyMaven'
+      PATH = $dockerhome/bin:$mavenhome/bin:$PATH
                            }
    stages {
      stage ("Build Image") {
@@ -12,8 +13,7 @@ pipeline {
                //sh 'python --version'
                  echo "$BUILD_NUMBER"
                  echo "$PATH"
-                 echo "$dockerhome"
-                 echo "$mavenhome"
+                 
                 }
        }
 }
