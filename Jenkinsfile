@@ -1,6 +1,10 @@
 pipeline {
    //agent { docker {image 'python:latest' } }
    agent any
+   environment {
+      dockerhome = tool 'MyDocker'
+      mavenhome = tool 'MyMaven'
+                           }
    stages {
      stage ("Build Image") {
         steps {
@@ -8,6 +12,8 @@ pipeline {
                //sh 'python --version'
                  echo "$BUILD_NUMBER"
                  echo "$PATH"
+                 echo '$dockerhome'
+                 echo '$mavenhome'
                 }
        }
 }
