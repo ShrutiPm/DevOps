@@ -14,7 +14,7 @@ pipeline {
                  echo "$BUILD_NUMBER"
                  echo "$PATH"
                  sh 'docker version'
-                 
+                 sh 'maven --version'
                 }
        }
 }
