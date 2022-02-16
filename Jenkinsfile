@@ -12,8 +12,8 @@ pipeline {
                //sh 'python --version'
                  echo "$BUILD_NUMBER"
                  echo "$PATH"
-                 echo '$dockerhome'
-                 echo '$mavenhome'
+                 echo "$dockerhome"
+                 echo "$mavenhome"
                 }
        }
 }
