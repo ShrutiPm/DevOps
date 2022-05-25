@@ -1,35 +1,13 @@
 pipeline {
-        agent any
-        stages {
-       	   stage('Dev') {
-                steps {
-	          echo "Dev All"
-	          }
-              }
-           stage('TEST') {
-                steps {
-                  echo " Test One"
-                  }
-              }
-           stage('Int Test') {
-                steps {
-                  echo " Int Test One"
-                  }
-              }
-    } 
-       post {
-          always {
-              echo "I run always"
+    agent any
+    stages {
+       stage ('build image') {
+            steps {
+                     sh 'pwd'
+                    }
              }
 
-          success {
-             echo "I run when success"
-            }
+       }
 
-          failure {
-             echo "I run in failure"
-            }
- 
-      }
 
 }
